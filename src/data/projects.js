@@ -36,23 +36,6 @@ const projects = [
       },
     ],
   },
-  {
-    slug: "case-study",
-    title: "YATA - Poster",
-    year: "2025",
-    summary:
-      "Et projektkort, som du kan kopiere og ændre til dit eget projekt.",
-    description:
-      "Ctrl er et fiktivt brand jeg kreerede som en del af et case study. Jeg arbejdede her med brugerreasearch for at forstå vores målgruppe, er derved finde frem til deres brandidentitet, samt hvordan man kunne markedsføre brandet på sociale medier, her Instagram. Jeg arbejdede i både Figma og forskellige Adobe programmer, for at komme frem til resulatet",
-    tags: ["User Research", "Figma", "Brand Design/Visual Identity"],
-    image: `${import.meta.env.BASE_URL}billeder/YATA.svg`,
-    links: [
-      {
-        label: "Eksempel-link",
-        href: "https://github.com",
-      },
-    ],
-  },
 ];
 
 export default projects;
