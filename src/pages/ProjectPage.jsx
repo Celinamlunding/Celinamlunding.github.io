@@ -49,6 +49,28 @@ function ProjectPage() {
           </a>
         ))}
       </div>
+
+      {project.slug === "case-study" && (
+        <div className="project-gallery">
+          <div className="project-gallery-row">
+            <img
+              className="project-illustration"
+              src="/billeder/ctrl.svg"
+              alt="Illustration til CTRL-projektet"
+            />
+            <img
+              className="project-illustration"
+              src="/billeder/ctrl.2..svg"
+              alt="Anden illustration til CTRL-projektet"
+            />
+          </div>
+          <div className="project-gallery-row project-gallery-row--bottom">
+            <img src="/billeder/story.1.svg" alt="Story illustration 1" />
+            <img src="/billeder/story.2.svg" alt="Story illustration 2" />
+            <img src="/billeder/story.3.svg" alt="Story illustration 3" />
+          </div>
+        </div>
+      )}
     </article>
   );
 }
