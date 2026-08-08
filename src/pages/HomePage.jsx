@@ -8,12 +8,21 @@ function HomePage() {
   return (
     <div className="page home-page">
       <section className="hero-section">
-        <p className="eyebrow">Portfolio</p>
-        <h1>Hej, jeg hedder Celina.</h1>
-        <p className="hero-text">
-          Jeg arbejder med design, content creation og digitale produkter. Her
-          samler jeg projekter, proces og det, jeg lærer undervejs.
-        </p>
+        <div className="hero-intro">
+          <div className="hero-copy">
+            <p className="eyebrow">Portfolio</p>
+            <h1>Hej, jeg hedder Celina.</h1>
+            <p className="hero-text">
+              Jeg arbejder med design, content creation og digitale produkter.
+              Her samler jeg projekter, proces og det, jeg lærer undervejs.
+            </p>
+          </div>
+          <img
+            className="hero-image"
+            src="/billeder/mig.1.svg"
+            alt="Illustration af Celina"
+          />
+        </div>
         <div className="actions">
           <Link className="button" to="/projects">
             Se projekter

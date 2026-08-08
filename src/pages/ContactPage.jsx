@@ -4,30 +4,39 @@ function ContactPage() {
   return (
     <div className="page narrow contact-page">
       <p className="eyebrow">Kontakt</p>
-      <h1>Lad os tale sammen.</h1>
-      <p className="lead">
-        Tilpas links og mailadresse, så siden peger på dine egne profiler.
-      </p>
+      <h1>Hvor du finder mig</h1>
 
-      <ul className="contact-list">
-        <li>
-          <a href="mailto:dinmail@example.com">dinmail@example.com</a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/username"
-            rel="noreferrer"
-            target="_blank"
-          >
-            GitHub
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com" rel="noreferrer" target="_blank">
-            LinkedIn
-          </a>
-        </li>
-      </ul>
+      <div className="contact-card">
+        <div className="contact-card-image">
+          <img src="/billeder/mig-blurry.svg" alt="billede af mig" />
+        </div>
+
+        <div className="contact-card-content">
+          <h2>Kontakt</h2>
+          <p>
+            Du er velkommen til at skrive til mig, hvis du vil samarbejde om et
+            projekt eller høre mere om mig og mit arbejde.
+          </p>
+
+          <ul className="contact-list">
+            <li>
+              <a href="celinaml@outlook.dk">celinaml@outlook.dk</a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/celinamlunding"
+                rel="noreferrer"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href="tel:+4512345678">+45 60 24 85 56</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }

@@ -6,6 +6,23 @@
   padding: 3rem 0;
 }
 
+.home-page .hero-intro {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.home-page .hero-copy {
+  flex: 1;
+}
+
+.home-page .hero-image {
+  width: 320px;
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
+}
+
 .home-page .section-heading {
   display: grid;
   gap: 0.5rem;
@@ -25,10 +42,10 @@
 }
 
 .home-page .project-card {
-  overflow: hidden;
+  overflow: visible;
   border: 1px solid #e5ddd2;
   border-radius: 0.75rem;
-  background: #fffaf3;
+  background: #dad5d5;
 }
 
 .home-page .project-card img {
@@ -42,7 +59,7 @@
 }
 
 .home-page .project-card a {
-  color: #5b21b6;
+  color: #f38209;
   font-weight: 800;
 }
 
@@ -50,5 +67,14 @@
   .home-page .hero-section {
     min-height: auto;
     padding-top: 2rem;
+  }
+
+  .home-page .hero-intro {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-page .hero-image {
+    width: 160px;
   }
 }

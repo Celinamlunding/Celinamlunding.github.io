@@ -1,13 +1,13 @@
 const projects = [
   {
     slug: "portfolio",
-    title: "Portfolio",
+    title: "MARVEL- Civil War Poster",
     year: "2026",
     summary: "En personlig portfolio bygget med React, Vite og GitHub Pages.",
     description:
       "Portfolioen viser udvalgte projekter og fungerer som et udgangspunkt for at arbejde med komponenter, routing, styling og deployment.",
-    tags: ["React", "Vite", "GitHub Pages"],
-    image: `${import.meta.env.BASE_URL}portfolio-placeholder.svg`,
+    tags: ["Adobe Photoshop", "Adobe Lightroom"],
+    image: `${import.meta.env.BASE_URL}billeder/poster.svg`,
     links: [
       {
         label: "Live site",
@@ -21,13 +21,14 @@ const projects = [
   },
   {
     slug: "case-study",
-    title: "Case study",
+    title: "CTRL - Case Study",
     year: "2026",
-    summary: "Et projektkort, som du kan kopiere og ændre til dit eget projekt.",
+    summary:
+      "Et projektkort, som du kan kopiere og ændre til dit eget projekt.",
     description:
       "Beskriv problemet, processen, din rolle, de vigtigste valg og hvad du lærte. Gør projektet konkret, så andre kan forstå dit arbejde.",
-    tags: ["Design", "Frontend", "Proces"],
-    image: `${import.meta.env.BASE_URL}portfolio-placeholder.svg`,
+    tags: ["User Research", "Figma", "Brand Design/Visual Identity"],
+    image: `${import.meta.env.BASE_URL}billeder/ctrl.logo.svg`,
     links: [
       {
         label: "Eksempel-link",
