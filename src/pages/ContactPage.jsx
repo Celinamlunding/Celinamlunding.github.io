@@ -1,6 +1,8 @@
+import "./ContactPage.css";
+
 function ContactPage() {
   return (
-    <div className="page narrow">
+    <div className="page narrow contact-page">
       <p className="eyebrow">Kontakt</p>
       <h1>Lad os tale sammen.</h1>
       <p className="lead">
@@ -12,7 +14,11 @@ function ContactPage() {
           <a href="mailto:dinmail@example.com">dinmail@example.com</a>
         </li>
         <li>
-          <a href="https://github.com/username" rel="noreferrer" target="_blank">
+          <a
+            href="https://github.com/username"
+            rel="noreferrer"
+            target="_blank"
+          >
             GitHub
           </a>
         </li>

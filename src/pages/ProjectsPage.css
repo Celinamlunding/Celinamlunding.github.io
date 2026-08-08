@@ -1,0 +1,31 @@
+.projects-page .intro {
+  max-width: 720px;
+}
+
+.projects-page .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.projects-page .project-card {
+  overflow: hidden;
+  border: 1px solid #e5ddd2;
+  border-radius: 0.75rem;
+  background: #fffaf3;
+}
+
+.projects-page .project-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.projects-page .project-card-content {
+  padding: 1.1rem;
+}
+
+.projects-page .project-card a {
+  color: #5b21b6;
+  font-weight: 800;
+}

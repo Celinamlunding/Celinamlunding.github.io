@@ -1,0 +1,54 @@
+.home-page .hero-section {
+  display: grid;
+  gap: 1.5rem;
+  align-content: center;
+  min-height: 58svh;
+  padding: 3rem 0;
+}
+
+.home-page .section-heading {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 640px;
+  margin-bottom: 1.5rem;
+}
+
+.home-page .hero-text {
+  max-width: 680px;
+  font-size: 1.15rem;
+}
+
+.home-page .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.home-page .project-card {
+  overflow: hidden;
+  border: 1px solid #e5ddd2;
+  border-radius: 0.75rem;
+  background: #fffaf3;
+}
+
+.home-page .project-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.home-page .project-card-content {
+  padding: 1.1rem;
+}
+
+.home-page .project-card a {
+  color: #5b21b6;
+  font-weight: 800;
+}
+
+@media (max-width: 720px) {
+  .home-page .hero-section {
+    min-height: auto;
+    padding-top: 2rem;
+  }
+}

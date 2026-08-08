@@ -1,11 +1,12 @@
 import { Link } from "react-router";
 import projects from "../data/projects";
+import "./HomePage.css";
 
 function HomePage() {
   const featuredProjects = projects.slice(0, 2);
 
   return (
-    <div className="page">
+    <div className="page home-page">
       <section className="hero-section">
         <p className="eyebrow">Portfolio</p>
         <h1>Hej, jeg hedder Celina.</h1>

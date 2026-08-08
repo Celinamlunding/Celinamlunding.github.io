@@ -1,9 +1,10 @@
 import { Link } from "react-router";
 import projects from "../data/projects";
+import "./ProjectsPage.css";
 
 function ProjectsPage() {
   return (
-    <div className="page">
+    <div className="page projects-page">
       <section className="section intro">
         <p className="eyebrow">Projekter</p>
         <h1>Mine projekter</h1>
