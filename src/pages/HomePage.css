@@ -2,14 +2,8 @@
   display: grid;
   gap: 1.5rem;
   align-content: center;
-  min-height: 75svh;
+  min-height: 58svh;
   padding: 3rem 0;
-}
-
-.home-page h1 {
-  max-width: none;
-  font-size: clamp(4rem, 12vw, 8.5rem);
-  line-height: 0.9;
 }
 
 .home-page .hero-intro {
