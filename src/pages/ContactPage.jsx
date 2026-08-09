@@ -7,7 +7,7 @@ function ContactPage() {
 
       <div className="contact-card">
         <div className="contact-card-image">
-          <img src="/billeder/mig-blurry.svg" alt="billede af mig" />
+          <img src="public/billeder/mig-blurry.svg" alt="billede af mig" />
         </div>
 
         <div className="contact-card-content">

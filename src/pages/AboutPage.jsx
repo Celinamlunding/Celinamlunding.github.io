@@ -2,9 +2,9 @@ import "./AboutPage.css";
 
 function AboutPage() {
   const services = [
-    { image: "/collage/IMG_0069.JPG" },
-    { image: "/collage/IMG_6894.jpg" },
-    { image: "/collage/MIG.png" },
+    { image: "public/collage/IMG_0069.JPG" },
+    { image: "public/collage/IMG_6894.jpg" },
+    { image: "public/collage/MIG.png" },
   ];
 
   return (
