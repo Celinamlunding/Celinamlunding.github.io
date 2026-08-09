@@ -3,7 +3,6 @@ import "./ContactPage.css";
 function ContactPage() {
   return (
     <div className="page narrow contact-page">
-      <p className="eyebrow">Kontakt</p>
       <h1>Hvor du finder mig</h1>
 
       <div className="contact-card">

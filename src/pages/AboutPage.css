@@ -1,89 +1,126 @@
 .about-page .about-hero {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
   align-items: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  padding: 3rem 0;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-page .about-hero-copy {
-  max-width: 640px;
-  text-align: center;
+  padding-right: 2rem;
 }
 
-.about-page .about-collage {
+.about-page .about-hero-copy h1 {
+  font-size: clamp(2.8rem, 6vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.about-page .about-hero-copy .lead {
+  margin-bottom: 1.5rem;
+  max-width: none;
+}
+
+.about-page .about-grid {
   display: grid;
-  width: 100%;
-  max-width: 900px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(3, minmax(140px, auto));
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
   gap: 1rem;
 }
 
-.about-page .collage-card {
+.about-page .service-card {
+  position: relative;
   overflow: hidden;
-  border: 1px solid #e5ddd2;
-  border-radius: 1rem;
-  background: #fffaf3;
+  border-radius: 0.75rem;
+  background: #f0f0f0;
+  aspect-ratio: 1;
 }
 
-.about-page .collage-card img {
+.about-page .service-card:nth-child(1) {
+  grid-row: span 2;
+  aspect-ratio: auto;
+}
+
+.about-page .service-card img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
-  background: #fff;
 }
 
-.about-page .collage-large {
-  grid-column: 1 / span 1;
-  grid-row: 1 / span 2;
+.about-page .service-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: #ffffff;
+  padding: 1.5rem 1rem 1rem;
+  display: flex;
+  align-items: flex-end;
+  min-height: 80px;
+  justify-content: center;
 }
 
-.about-page .collage-small-top {
-  grid-column: 2 / span 1;
-  grid-row: 1 / span 1;
-}
-
-.about-page .collage-small-bottom {
-  grid-column: 2 / span 1;
-  grid-row: 2 / span 1;
-}
-
-.about-page .collage-wide {
-  grid-column: 1 / span 2;
-  grid-row: 3 / span 1;
+.about-page .service-overlay h3 {
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+  font-size: 1.1rem;
+  white-space: pre-wrap;
+  line-height: 1.3;
 }
 
 .about-page .info-list {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
   margin-top: 2rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-page .info-list div {
   border: 1px solid #e5ddd2;
   border-radius: 0.75rem;
   background: #fffaf3;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .about-page .info-list h2 {
   font-size: 1.15rem;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1024px) {
   .about-page .about-hero {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
-  .about-page .collage-card {
-    min-height: 180px;
+  .about-page .about-hero-copy {
+    padding-right: 0;
+  }
+
+  .about-page .service-card:nth-child(1) {
+    grid-row: span 1;
+  }
+
+  .about-page .info-list {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 520px) {
-  .about-page .collage-card {
-    min-height: 140px;
+  .about-page .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page .service-card {
+    aspect-ratio: 16 / 10;
   }
 }

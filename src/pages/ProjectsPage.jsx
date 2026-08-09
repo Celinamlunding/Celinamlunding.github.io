@@ -6,7 +6,6 @@ function ProjectsPage() {
   return (
     <div className="page projects-page">
       <section className="section intro">
-        <p className="eyebrow">Projekter</p>
         <h1>Mine projekter</h1>
         <p>
           Udskift eksemplerne med dine egne projekter. Brug korte beskrivelser,
