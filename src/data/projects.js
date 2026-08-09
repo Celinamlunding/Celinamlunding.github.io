@@ -1,6 +1,6 @@
 const projects = [
   {
-    slug: "portfolio",
+    slug: "poster",
     title: "MARVEL - Poster",
     year: "2026",
     summary: "En personlig portfolio bygget med React, Vite og GitHub Pages.",
@@ -20,7 +20,7 @@ const projects = [
     ],
   },
   {
-    slug: "case-study",
+    slug: "ctrl",
     title: "CTRL - Case Study",
     year: "2026",
     summary:
@@ -32,6 +32,41 @@ const projects = [
     links: [
       {
         label: "Eksempel-link",
+        href: "https://github.com",
+      },
+    ],
+  },
+  {
+    slug: "yata",
+    title: "YATA - Poster",
+    year: "2025",
+    summary:
+      "Et visuelt brandprojekt med logo, farver og sociale formater til et kreativt koncept.",
+    description:
+      "YATA er et fiktivt brand, hvor jeg udviklede identitet og layout til sociale medier. Projektet fokuserer på visuel storytelling, simple ikoner og et sammenhængende farveunivers.",
+    tags: ["Brand Design", "Illustration", "Social Media"],
+    image: `${import.meta.env.BASE_URL}billeder/YATA.svg`,
+    links: [
+      {
+        label: "Se projekt",
+        href: "https://github.com",
+      },
+    ],
+  },
+
+  {
+    slug: "2Gather",
+    title: "2Gather - Case Study",
+    year: "2026",
+    summary:
+      "Et visuelt brandprojekt med logo, farver og sociale formater til et kreativt koncept.",
+    description:
+      "YATA er et fiktivt brand, hvor jeg udviklede identitet og layout til sociale medier. Projektet fokuserer på visuel storytelling, simple ikoner og et sammenhængende farveunivers.",
+    tags: ["Brand Design", "Illustration", "Social Media"],
+    image: `${import.meta.env.BASE_URL}billeder/LOGO.svg`,
+    links: [
+      {
+        label: "Se projekt",
         href: "https://github.com",
       },
     ],

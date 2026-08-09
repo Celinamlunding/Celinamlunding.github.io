@@ -1,34 +1,33 @@
 import "./AboutPage.css";
 
 function AboutPage() {
+  const services = [
+    { image: "/collage/IMG_0069.JPG" },
+    { image: "/collage/IMG_6894.jpg" },
+    { image: "/collage/MIG.png" },
+  ];
+
   return (
-    <div className="page narrow about-page">
+    <div className="page about-page">
       <section className="about-hero">
         <div className="about-hero-copy">
-          <p className="eyebrow">Om mig</p>
-          <h1>Hvem er jeg?</h1>
+          <h1>Fanget på kamera</h1>
           <p className="lead">
-            Skriv kort om din faglige retning, dine interesser og hvad du gerne
-            vil blive bedre til. Hold teksten konkret og personlig.
+            Jeg elsker at fange de specialle øjeblikke på kamerea, store som
+            små.
           </p>
+          <button className="button">Se mere</button>
         </div>
 
-        <div
-          className="about-collage"
-          aria-label="Billeder og illustrationer om mig"
-        >
-          <div className="collage-card collage-large">
-            <img src="/billeder/poster.svg" alt="Collage billede 1" />
-          </div>
-          <div className="collage-card collage-small-top">
-            <img src="/billeder/mig-blurry.svg" alt="Collage billede 2" />
-          </div>
-          <div className="collage-card collage-small-bottom">
-            <img src="/billeder/ctrl.logo.svg" alt="Collage billede 3" />
-          </div>
-          <div className="collage-card collage-wide">
-            <img src="/billeder/mig.1.svg" alt="Collage billede 4" />
-          </div>
+        <div className="about-grid" aria-label="Services med billeder">
+          {services.map((service, index) => (
+            <div className="service-card" key={index}>
+              <img src={service.image} alt={service.title} />
+              <div className="service-overlay">
+                <h3>{service.title}</h3>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
