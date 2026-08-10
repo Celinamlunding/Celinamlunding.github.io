@@ -8,7 +8,7 @@ function HomePage() {
       <section className="hero-section">
         <div className="hero-intro">
           <div className="hero-copy">
-            <h1>Mojn</h1>
+            <h1>Hej</h1>
             <p className="hero-text">
               Jeg arbejder med design, content creation og digitale produkter.
               Her samler jeg projekter, proces og det, jeg lærer undervejs.
