@@ -83,7 +83,7 @@ function ProjectPage() {
             <p>Her ses profilen for en bruger i appen 2Gather.</p>
           </div>
           <div className="project-gallery-row project-gallery-row--bottom">
-            <img src="/twogather/forsiden3.svg" alt="Story illustration 1" />
+            <img src="/twogather/done.svg" alt="Story illustration 1" />
             <img src="/twogather/eventdeltag.svg" alt="Story illustration 2" />
             <img src="/twogather/tilmeldt.svg" alt="Story illustration 3" />
           </div>
