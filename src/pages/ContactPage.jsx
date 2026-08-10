@@ -14,7 +14,7 @@ function ContactPage() {
       <div className="additional-section">
         <div className="additional-content">
           <div className="additional-image">
-            <img src="billeder/mig-blurry.svg" alt="billede af mig" />
+            <img src="/billeder/mig-blurry.svg" alt="billede af mig" />
           </div>
           <div className="additional-text">
             <ul className="contact-list">
