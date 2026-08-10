@@ -1,6 +1,15 @@
 .projects-page .intro {
   max-width: 720px;
 }
+.project-heading {
+  font-size: 13.5rem;
+  font-weight: 500;
+  color: #440707;
+  text-align: center;
+  padding: 5 rem 1.5rem 1.5rem;
+  margin: 0;
+  letter-spacing: 0.1 em;
+}
 
 .projects-page .project-grid {
   display: grid;
@@ -26,6 +35,6 @@
 }
 
 .projects-page .project-card a {
-  color: #f38209;
+  color: #120570;
   font-weight: 800;
 }

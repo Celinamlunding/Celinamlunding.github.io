@@ -1,13 +1,14 @@
 const projects = [
   {
-    slug: "poster",
-    title: "MARVEL - Poster",
+    slug: "posters",
+    title: "Posters",
     year: "2026",
-    summary: "En personlig portfolio bygget med React, Vite og GitHub Pages.",
+    summary: "Posters der er lavet til begivenheder eller som hygge projekter.",
     description:
       "Portfolioen viser udvalgte projekter og fungerer som et udgangspunkt for at arbejde med komponenter, routing, styling og deployment.",
     tags: ["Adobe Photoshop", "Adobe Lightroom"],
     image: `${import.meta.env.BASE_URL}billeder/marvel.png`,
+
     links: [
       {
         label: "Live site",
@@ -23,8 +24,7 @@ const projects = [
     slug: "ctrl",
     title: "CTRL - Case Study",
     year: "2026",
-    summary:
-      "Et projektkort, som du kan kopiere og ændre til dit eget projekt.",
+    summary: "En fiktiv tøjretailer der er udviklet igennem et Case study.",
     description:
       "Ctrl er et fiktivt brand jeg kreerede som en del af et case study. Jeg arbejdede her med brugerreasearch for at forstå vores målgruppe, er derved finde frem til deres brandidentitet, samt hvordan man kunne markedsføre brandet på sociale medier, her Instagram. Jeg arbejdede i både Figma og forskellige Adobe programmer, for at komme frem til resulatet",
     tags: ["User Research", "Figma", "Brand Design/Visual Identity"],
@@ -36,30 +36,12 @@ const projects = [
       },
     ],
   },
-  {
-    slug: "yata",
-    title: "YATA - Poster",
-    year: "2025",
-    summary:
-      "Et visuelt brandprojekt med logo, farver og sociale formater til et kreativt koncept.",
-    description:
-      "YATA er et fiktivt brand, hvor jeg udviklede identitet og layout til sociale medier. Projektet fokuserer på visuel storytelling, simple ikoner og et sammenhængende farveunivers.",
-    tags: ["Brand Design", "Illustration", "Social Media"],
-    image: `${import.meta.env.BASE_URL}billeder/YATA.svg`,
-    links: [
-      {
-        label: "Se projekt",
-        href: "https://github.com",
-      },
-    ],
-  },
 
   {
     slug: "2Gather",
     title: "2Gather - Case Study",
     year: "2026",
-    summary:
-      "Et visuelt brandprojekt med logo, farver og sociale formater til et kreativt koncept.",
+    summary: "En fiktionel app der er udviklet igennem et Case study.",
     description:
       "YATA er et fiktivt brand, hvor jeg udviklede identitet og layout til sociale medier. Projektet fokuserer på visuel storytelling, simple ikoner og et sammenhængende farveunivers.",
     tags: ["Brand Design", "Illustration", "Social Media"],

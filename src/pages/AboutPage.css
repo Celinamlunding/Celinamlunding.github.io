@@ -62,7 +62,7 @@
   transform: rotate(-3deg);
 }
 .about-additional-section {
-  background: #120570;
+  background: #e5e5e5;
   padding: 5rem 1.5rem 5rem 1.5rem;
   display: flex;
   align-items: center;
@@ -122,7 +122,7 @@
 }
 
 .about-additional-text p {
-  font-size: 0.95rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   margin: 0 0 1.5rem 0;
   color: #333;
