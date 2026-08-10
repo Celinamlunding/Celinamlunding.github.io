@@ -8,7 +8,7 @@ function HomePage() {
       <section className="hero-section">
         <div className="hero-intro">
           <div className="hero-copy">
-            <h1>Hej</h1>
+            <h1>Heyyy</h1>
             <p className="hero-text">
               Jeg arbejder med design, content creation og digitale produkter.
               Her samler jeg projekter, proces og det, jeg lærer undervejs.
@@ -16,7 +16,7 @@ function HomePage() {
           </div>
           <img
             className="hero-image"
-            src="billeder/mig.1.svg"
+            src="public/billeder/mig.1.svg"
             alt="Illustration af Celina"
           />
         </div>
