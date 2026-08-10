@@ -71,7 +71,7 @@ function ProjectPage() {
           <div className="project-gallery-row">
             <img
               className="project-illustration"
-              src="/twogather/forside.svg"
+              src="twogather/forsiden3.svg"
               alt="Illustration til CTRL-projektet"
             />
             <p>Dette er den personlige forside af appen 2Gather.</p>
