@@ -71,7 +71,7 @@ function ProjectPage() {
           <div className="project-gallery-row">
             <img
               className="project-illustration"
-              src="twogather/forsiden3.svg"
+              src="/twogather/forside.svg"
               alt="Illustration til CTRL-projektet"
             />
             <p>Dette er den personlige forside af appen 2Gather.</p>
@@ -83,7 +83,7 @@ function ProjectPage() {
             <p>Her ses profilen for en bruger i appen 2Gather.</p>
           </div>
           <div className="project-gallery-row project-gallery-row--bottom">
-            <img src="/twogather/eventcard.svg" alt="Story illustration 1" />
+            <img src="/twogather/forsiden3.svg" alt="Story illustration 1" />
             <img src="/twogather/eventdeltag.svg" alt="Story illustration 2" />
             <img src="/twogather/tilmeldt.svg" alt="Story illustration 3" />
           </div>
