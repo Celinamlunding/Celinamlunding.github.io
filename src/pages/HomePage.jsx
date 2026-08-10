@@ -16,7 +16,7 @@ function HomePage() {
           </div>
           <img
             className="hero-image"
-            src="public/billeder/mig.1.svg"
+            src="billeder/mig.1.svg"
             alt="Illustration af Celina"
           />
         </div>
