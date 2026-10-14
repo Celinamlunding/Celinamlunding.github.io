@@ -6,6 +6,53 @@ function ProjectPage() {
   const { slug } = useParams();
   const project = projects.find((item) => item.slug === slug);
 
+  const defaultStory = {
+    challenge:
+      "Der var tydelige behov for en mere konsistent og intentionel designproces, så produktet kunne blive lettere at forstå, bruge og videreudvikle.",
+    challenge2:
+      "Jeg fokuserede på at skabe en mere meningsfuld og brugervenlig oplevelse, hvor strukturen og funktionaliteten blev mere tydelige i praksis.",
+    solution:
+      "Jeg arbejdede med at skabe en mere tydelig og målrettet brugeroplevelse, hvor designet blev mere funktionelt, struktureret og lettere at navigere.",
+    solution2:
+      "Ved at forenkle og justere den visuelle og tekniske struktur, kunne jeg skabe en mere klar og engagerende oplevelse uden at gå på kompromis med funktionaliteten.",
+    processTitle: "Fra diagnose til kvalificeret løsning",
+    processParagraph:
+      "Arbejdet indebar en klar proces, hvor jeg først identificerede de største udfordringer og derefter udviklede en mere kvalificeret løsning baseret på en tydelig forståelse af brugernes behov og det tekniske setup.",
+    cards: [
+      {
+        number: "01",
+        title: "Diagnose",
+        text: "Først undersøgte jeg den eksisterende løsning for at finde de vigtigste barrierer i brugerflowet og den tekniske struktur.",
+      },
+      {
+        number: "02",
+        title: "Redesign",
+        text: "Derefter arbejdede jeg med at forbedre flowet, tydeliggøre struktur og gøre interaktionerne mere intuitive for brugeren.",
+      },
+      {
+        number: "03",
+        title: "Kvalificering",
+        text: "Til sidst kvalificerede jeg løsningen med fokus på bæredygtighed, skalerbarhed og bedre brugeroplevelse i praksis.",
+      },
+    ],
+    optimizationTitle: "Små ændringer med tydeligt formål",
+    optimizationParagraph1:
+      "Fokus var ikke at ændre alt, men at gøre de helt rigtige forbedringer, der havde en tydelig effekt for brugernes forståelse og oplevelse af produktet.",
+    optimizationParagraph2:
+      "Information blev mere tydelig, interaktioner mere intuitive, og den samlede erfaring blev mere gennemskuelig uden at miste karakter eller funktionalitet.",
+    reflectionTitle: "Optimering er mange ting",
+    reflectionParagraph1:
+      "Projektet viste, at optimering ikke kun handler om visuelle tweaks. Det handler også om at gøre et system mere forståeligt, mere konsekvent og mere brugbart i den virkelige hverdag.",
+    reflectionParagraph2:
+      "Det gav mulighed for en mere strømlinet, robust og meningsfuld løsning, der blev bedre at forholde sig til både som bruger og som udvikler.",
+    checklist: [
+      "Diagnostik før udvikling",
+      "Smidig refaktorering",
+      "Brugervenlig struktur",
+      "Test og iterativ forbedring",
+    ],
+  };
+
   if (!project) {
     return (
       <div className="page narrow">
@@ -19,201 +66,158 @@ function ProjectPage() {
     );
   }
 
+  const story = project.story || defaultStory;
+
   return (
     <article className="page narrow project-page">
       <Link className="back-link" to="/projects">
         Tilbage til projekter
       </Link>
 
-      {project.slug !== "posters" && project.slug !== "Vuuh" && (
-        <div className="project-hero-logo">
-          <img src={project.image} alt={`${project.title} logo`} />
-        </div>
-      )}
-      {project.slug === "posters" && (
-        <img className="detail-image" src={project.image} alt="" />
-      )}
-      <h1>{project.title}</h1>
-      <p className="lead">{project.description}</p>
-
-      <ul className="tag-list">
-        {project.tags.map((tag) => (
-          <li key={tag}>{tag}</li>
-        ))}
-      </ul>
-
-      {project.slug === "ctrl" && (
-        <div className="project-gallery">
-          <div className="project-gallery-row">
-            <img
-              className="project-illustration"
-              src="/billeder/ctrl.svg"
-              alt="Illustration til CTRL-projektet"
-            />
-            <img
-              className="project-illustration"
-              src="/billeder/ctrl.2..svg"
-              alt="Anden illustration til CTRL-projektet"
-            />
-            <p>
-              Her er resultatet af hvordan profilen endte med at se ud. Første
-              billede viser hvordan brugeren først ser profilen. Det andet
-              billede viser de taggede billeder, som kunder har oploadet.
+      <div className="project-case-study project-case-study--shared">
+        <div className="project-case-study__hero">
+          <div className="project-case-study__copy">
+            <p className="project-kicker">
+              {project.slug === "Mellemrum"
+                ? "3. SEMESTER · PRODUKTOPMÆRKNING"
+                : "Case study"}
             </p>
-          </div>
-          <div className="project-gallery-row project-gallery-row--bottom">
-            <img src="/billeder/story.1.svg" alt="Story illustration 1" />
-            <img src="/billeder/story.2.svg" alt="Story illustration 2" />
-            <img src="/billeder/story.3.svg" alt="Story illustration 3" />
-          </div>
-          <p>
-            Her er eksempler på hvordan markedsføringen af brandet kunne se ud.
-            .
-          </p>
-        </div>
-      )}
+            <h1 className="project-case-study__title">{project.title}</h1>
+            <p className="project-case-study__lead">{project.description}</p>
 
-      {project.slug === "Vuuh" && (
-        <div className="project-gallery vuuh-gallery">
-          <div className="vuuh-logo-header">
-            <img src="/billeder/vuuh/vuuh-logo.svg" alt="Vuuh logo" />
-          </div>
-
-          <div className="vuuh-section vuuh-case-study">
-            <div className="vuuh-visual-card vuuh-installation">
-              <img
-                src="/billeder/vuuh/installation-sucess.svg"
-                alt="Succesfuld installation visning"
-              />
-            </div>
-            <div className="vuuh-copy">
-              <h2>Case study</h2>
-              <p>
-                Vuuh er designet som en enkel, tryg onboarding-oplevelse, der
-                hjælper brugeren gennem installationen uden at føle sig
-                overvældet. Fokus ligger på tydelige trin, visuel ro og klare
-                succesbeviser i hver del af flowet.
-              </p>
-              <p>
-                Når brugeren går igennem processen, bliver hver handling
-                bekræftet med en lille visuel feedback, så det føles sikkert og
-                kontrolleret. Det gør appen lettere at forstå, især når den skal
-                guide nybegyndere gennem en mere teknisk opsætningsproces.
-              </p>
-            </div>
-          </div>
-
-          <div className="vuuh-section vuuh-step-by-step">
-            <div className="vuuh-copy">
-              <h2>Step-by-step</h2>
-              <p>
-                Flowet er opdelt i små, håndterbare steps, så brugeren kan følge
-                processen uden at miste overblikket. Hvert trin er visuelt
-                afgrænset og understøttet af en enkel statusfortælling.
-              </p>
-              <p>
-                Designet gør det nemt at forstå, hvad der sker nu, hvad der
-                kommer næste, og hvor langt man er i installationen.
-              </p>
-            </div>
-            <div className="vuuh-checklist-grid">
-              <img
-                src="/billeder/vuuh/checklist-1.svg"
-                alt="Checklist step 1"
-              />
-              <img
-                src="/billeder/vuuh/checklist-2.svg"
-                alt="Checklist step 2"
-              />
-              <img
-                src="/billeder/vuuh/checklist-3.svg"
-                alt="Checklist step 3"
-              />
-            </div>
-          </div>
-
-          <div className="vuuh-section vuuh-modal-section">
-            <div className="vuuh-visual-card vuuh-modal-card">
-              <img src="/billeder/vuuh/dialog-modal.svg" alt="Dialog modal" />
-            </div>
-            <div className="vuuh-copy">
-              <h2>Modal</h2>
-              <p>
-                Modalen er lavet til at virke afslappet og tydelig i samme
-                bevægelse. Den sender en klar besked uden at afbryde brugerens
-                flow for meget og skaber ro i den ellers tekniske proces.
-              </p>
-              <p>
-                Den bruger samme visuelle tone som resten af appen og giver
-                brugeren en konsistent forståelse af, hvad der sker lige nu.
-              </p>
-            </div>
-          </div>
-
-          <div className="vuuh-section vuuh-success-section">
-            <div className="vuuh-copy">
-              <h2>Succes</h2>
-              <p>
-                Den sidste del af flowet er rettet mod en positiv afslutning.
-                Når installationen er færdig, bliver det tydeligt, at brugeren
-                er kommet igennem processen med succes.
-              </p>
-              <p>
-                Den grønne successtatus skaber en tydelig afrunding og gør
-                oplevelsen mere motiverende og tillidsfuld.
-              </p>
-            </div>
-            <div className="vuuh-visual-card vuuh-success-card">
-              <img
-                src="/billeder/vuuh/connection-succes.svg"
-                alt="Succesvisning efter tilslutning"
-              />
-            </div>
-          </div>
-
-          <div className="vuuh-section vuuh-compare">
-            <div className="vuuh-compare-column">
-              <h3>Før</h3>
-              <div className="vuuh-compare-card">
-                <img src="/billeder/vuuh/checklist-1.svg" alt="Før-visning" />
+            <div className="project-case-study__meta">
+              <div>
+                <span>Rolle</span>
+                <strong>{project.tags[0] || "Design"}</strong>
+              </div>
+              <div>
+                <span>Samarbejde</span>
+                <strong>Individuelt projekt</strong>
+              </div>
+              <div>
+                <span>Fokus</span>
+                <strong>{project.tags[1] || "Brand"}</strong>
               </div>
             </div>
-            <div className="vuuh-compare-column">
-              <h3>Efter</h3>
-              <div className="vuuh-compare-card">
-                <img
-                  src="/billeder/vuuh/connection-succes.svg"
-                  alt="Efter-visning"
-                />
+
+            {project.links?.length > 0 && (
+              <div className="project-case-study__actions">
+                {project.links.map((link) => (
+                  <a
+                    key={link.label}
+                    className="project-case-study__button"
+                    href={link.href}
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    rel={
+                      link.href.startsWith("http") ? "noreferrer" : undefined
+                    }
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div className="project-case-study__visual">
+            <div className="project-mockup-shell">
+              <div className="project-mockup-window">
+                <div className="project-mockup-window__topbar">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div className="project-mockup-window__content">
+                  <div className="project-mockup-screen">
+                    <img src={project.image} alt={`${project.title} mockup`} />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      )}
+      </div>
 
-      {project.slug === "2Gather" && (
-        <div className="project-gallery">
-          <div className="project-gallery-row">
-            <img
-              className="project-illustration"
-              src="/twogather/forside.svg"
-              alt="Illustration til CTRL-projektet"
-            />
-            <p>Dette er den personlige forside af appen 2Gather.</p>
-            <img
-              className="project-illustration"
-              src="/twogather/profile.svg"
-              alt="Anden illustration til CTRL-projektet"
-            />
-            <p>Her ses profilen for en bruger i appen 2Gather.</p>
+      <div className="project-story">
+        <div className="project-story__split">
+          <div className="project-story__column">
+            <span className="project-case-study__number">01</span>
+            <h2>Udfordringen</h2>
+            <p>{story.challenge}</p>
+            <p>{story.challenge2}</p>
           </div>
-          <div className="project-gallery-row project-gallery-row--bottom">
-            <img src="/twogather/done.svg" alt="Story illustration 1" />
-            <img src="/twogather/eventdeltag.svg" alt="Story illustration 2" />
-            <img src="/twogather/tilmeldt.svg" alt="Story illustration 3" />
+
+          <div className="project-story__column">
+            <span className="project-case-study__number">02</span>
+            <h2>Løsningen</h2>
+            <p>{story.solution}</p>
+            <p>{story.solution2}</p>
           </div>
         </div>
-      )}
+
+        <div className="project-story__process">
+          <p className="project-mini-label">PROCESSEN</p>
+          <h2>{story.processTitle}</h2>
+          <p>{story.processParagraph}</p>
+
+          <div className="project-story__cards">
+            {(story.cards || defaultStory.cards).map((card) => (
+              <article key={card.title} className="project-story__card">
+                <span>{card.number}</span>
+                <h3>{card.title}</h3>
+                <p>{card.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="project-story__optimization">
+          <div className="project-story__compare">
+            <div className="comparison-card comparison-card--before">
+              <div className="comparison-card__label">Før</div>
+              <div className="comparison-card__mockup">
+                <div className="comparison-card__screen">
+                  <span>{project.title}</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="comparison-card comparison-card--after">
+              <div className="comparison-card__label">Efter</div>
+              <div className="comparison-card__mockup">
+                <div className="comparison-card__screen comparison-card__screen--alt">
+                  <span>{project.title}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="project-story__text-block">
+            <p className="project-mini-label">OPTIMERINGEN</p>
+            <h2>{story.optimizationTitle}</h2>
+            <p>{story.optimizationParagraph1}</p>
+            <p>{story.optimizationParagraph2}</p>
+          </div>
+        </div>
+
+        <div className="project-story__reflection">
+          <div className="project-story__reflection-copy">
+            <p className="project-mini-label">REFLEKSION</p>
+            <h2>{story.reflectionTitle}</h2>
+            <p>{story.reflectionParagraph1}</p>
+            <p>{story.reflectionParagraph2}</p>
+          </div>
+
+          <div className="project-story__checklist">
+            <h3>Det tager jeg med videre</h3>
+            <ul>
+              {(story.checklist || defaultStory.checklist).map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
     </article>
   );
 }
