@@ -28,7 +28,7 @@ const projects = [
     description:
       "Ctrl er et fiktivt brand jeg kreerede som en del af et case study. Jeg arbejdede her med brugerreasearch for at forstå vores målgruppe, er derved finde frem til deres brandidentitet, samt hvordan man kunne markedsføre brandet på sociale medier, her Instagram. Jeg arbejdede i både Figma og forskellige Adobe programmer, for at komme frem til resulatet",
     tags: ["User Research", "Figma", "Brand Design/Visual Identity"],
-    image: `${import.meta.env.BASE_URL}billeder/ctrl.logo.svg`,
+    image: `${import.meta.env.BASE_URL}billeder/logo/ctrl.logo.svg`,
     links: [
       {
         label: "Eksempel-link",
@@ -45,7 +45,56 @@ const projects = [
     description:
       "YATA er et fiktivt brand, hvor jeg udviklede identitet og layout til sociale medier. Projektet fokuserer på visuel storytelling, simple ikoner og et sammenhængende farveunivers.",
     tags: ["Brand Design", "Illustration", "Social Media"],
-    image: `${import.meta.env.BASE_URL}billeder/LOGO.svg`,
+    image: `${import.meta.env.BASE_URL}billeder/logo/LOGO.svg`,
+    links: [
+      {
+        label: "Se projekt",
+        href: "https://github.com",
+      },
+    ],
+  },
+  {
+    slug: "Mellemrum",
+    title: "Mellemrum - Case Study",
+    year: "2026",
+    summary: "En fiktionel app der er udviklet igennem et Case study.",
+    description:
+      "YATA er et fiktivt brand, hvor jeg udviklede identitet og layout til sociale medier. Projektet fokuserer på visuel storytelling, simple ikoner og et sammenhængende farveunivers.",
+    tags: ["Brand Design", "Illustration", "Social Media"],
+    image: `${import.meta.env.BASE_URL}billeder/logo/mellemrum-logo.svg`,
+    links: [
+      {
+        label: "Se projekt",
+        href: "https://github.com",
+      },
+    ],
+  },
+  {
+    slug: "Vuuh",
+    title: "Vuuh - Case Study",
+    year: "2026",
+    summary:
+      "En onboarding- og installationsoplevelse, der gør onboarding mere overskuelig og tryg.",
+    description:
+      "Vuuh er et fiktivt produkt, hvor jeg udviklede en intuitiv onboarding-oplevelse med klare trin, brugervenlige modaler og en tydelig succesoplevelse. Projektet fokuserer på at gøre installation og tilslutning nem og tryg for brugeren.",
+    tags: ["UX Design", "UI Design", "Product Flow"],
+    image: `${import.meta.env.BASE_URL}billeder/vuuh/vuuh-logo.svg`,
+    links: [
+      {
+        label: "Se projekt",
+        href: "https://github.com",
+      },
+    ],
+  },
+  {
+    slug: "Re Rouge",
+    title: "La Rouge - Case Study",
+    year: "2026",
+    summary: "Optimering af La Rouges nuværende secondhand shop, ",
+    description:
+      "YATA er et fiktivt brand, hvor jeg udviklede identitet og layout til sociale medier. Projektet fokuserer på visuel storytelling, simple ikoner og et sammenhængende farveunivers.",
+    tags: ["Brand Design", "Illustration", "Social Media"],
+    image: `${import.meta.env.BASE_URL}billeder/logo/rerouge-logo.svg`,
     links: [
       {
         label: "Se projekt",

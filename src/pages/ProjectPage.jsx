@@ -25,8 +25,14 @@ function ProjectPage() {
         Tilbage til projekter
       </Link>
 
-      <img className="detail-image" src={project.image} alt="" />
-      <p className="eyebrow">{project.year}</p>
+      {project.slug !== "posters" && project.slug !== "Vuuh" && (
+        <div className="project-hero-logo">
+          <img src={project.image} alt={`${project.title} logo`} />
+        </div>
+      )}
+      {project.slug === "posters" && (
+        <img className="detail-image" src={project.image} alt="" />
+      )}
       <h1>{project.title}</h1>
       <p className="lead">{project.description}</p>
 
@@ -66,6 +72,125 @@ function ProjectPage() {
           </p>
         </div>
       )}
+
+      {project.slug === "Vuuh" && (
+        <div className="project-gallery vuuh-gallery">
+          <div className="vuuh-logo-header">
+            <img src="/billeder/vuuh/vuuh-logo.svg" alt="Vuuh logo" />
+          </div>
+
+          <div className="vuuh-section vuuh-case-study">
+            <div className="vuuh-visual-card vuuh-installation">
+              <img
+                src="/billeder/vuuh/installation-sucess.svg"
+                alt="Succesfuld installation visning"
+              />
+            </div>
+            <div className="vuuh-copy">
+              <h2>Case study</h2>
+              <p>
+                Vuuh er designet som en enkel, tryg onboarding-oplevelse, der
+                hjælper brugeren gennem installationen uden at føle sig
+                overvældet. Fokus ligger på tydelige trin, visuel ro og klare
+                succesbeviser i hver del af flowet.
+              </p>
+              <p>
+                Når brugeren går igennem processen, bliver hver handling
+                bekræftet med en lille visuel feedback, så det føles sikkert og
+                kontrolleret. Det gør appen lettere at forstå, især når den skal
+                guide nybegyndere gennem en mere teknisk opsætningsproces.
+              </p>
+            </div>
+          </div>
+
+          <div className="vuuh-section vuuh-step-by-step">
+            <div className="vuuh-copy">
+              <h2>Step-by-step</h2>
+              <p>
+                Flowet er opdelt i små, håndterbare steps, så brugeren kan følge
+                processen uden at miste overblikket. Hvert trin er visuelt
+                afgrænset og understøttet af en enkel statusfortælling.
+              </p>
+              <p>
+                Designet gør det nemt at forstå, hvad der sker nu, hvad der
+                kommer næste, og hvor langt man er i installationen.
+              </p>
+            </div>
+            <div className="vuuh-checklist-grid">
+              <img
+                src="/billeder/vuuh/checklist-1.svg"
+                alt="Checklist step 1"
+              />
+              <img
+                src="/billeder/vuuh/checklist-2.svg"
+                alt="Checklist step 2"
+              />
+              <img
+                src="/billeder/vuuh/checklist-3.svg"
+                alt="Checklist step 3"
+              />
+            </div>
+          </div>
+
+          <div className="vuuh-section vuuh-modal-section">
+            <div className="vuuh-visual-card vuuh-modal-card">
+              <img src="/billeder/vuuh/dialog-modal.svg" alt="Dialog modal" />
+            </div>
+            <div className="vuuh-copy">
+              <h2>Modal</h2>
+              <p>
+                Modalen er lavet til at virke afslappet og tydelig i samme
+                bevægelse. Den sender en klar besked uden at afbryde brugerens
+                flow for meget og skaber ro i den ellers tekniske proces.
+              </p>
+              <p>
+                Den bruger samme visuelle tone som resten af appen og giver
+                brugeren en konsistent forståelse af, hvad der sker lige nu.
+              </p>
+            </div>
+          </div>
+
+          <div className="vuuh-section vuuh-success-section">
+            <div className="vuuh-copy">
+              <h2>Succes</h2>
+              <p>
+                Den sidste del af flowet er rettet mod en positiv afslutning.
+                Når installationen er færdig, bliver det tydeligt, at brugeren
+                er kommet igennem processen med succes.
+              </p>
+              <p>
+                Den grønne successtatus skaber en tydelig afrunding og gør
+                oplevelsen mere motiverende og tillidsfuld.
+              </p>
+            </div>
+            <div className="vuuh-visual-card vuuh-success-card">
+              <img
+                src="/billeder/vuuh/connection-succes.svg"
+                alt="Succesvisning efter tilslutning"
+              />
+            </div>
+          </div>
+
+          <div className="vuuh-section vuuh-compare">
+            <div className="vuuh-compare-column">
+              <h3>Før</h3>
+              <div className="vuuh-compare-card">
+                <img src="/billeder/vuuh/checklist-1.svg" alt="Før-visning" />
+              </div>
+            </div>
+            <div className="vuuh-compare-column">
+              <h3>Efter</h3>
+              <div className="vuuh-compare-card">
+                <img
+                  src="/billeder/vuuh/connection-succes.svg"
+                  alt="Efter-visning"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {project.slug === "2Gather" && (
         <div className="project-gallery">
           <div className="project-gallery-row">
