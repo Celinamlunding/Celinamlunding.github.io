@@ -6,6 +6,7 @@
   width: min(100% - 2rem, 1120px);
   margin: 0 auto;
   padding: 1.25rem 0;
+  background: #dfe2eb;
 }
 
 .brand {
@@ -38,7 +39,7 @@
 
 .site-nav a.active,
 .site-nav a:hover {
-  color: #e5e5e5;
+  color: #dfe2eb;
   background: #120570;
 }
 

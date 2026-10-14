@@ -41,9 +41,134 @@
   margin: 0 auto;
 }
 
+.project-page .vuuh-gallery {
+  margin-top: 2rem;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.project-page .project-hero-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: -1rem auto 1.5rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.project-page .project-hero-logo img {
+  display: block;
+  width: min(100%, 900px);
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.project-page .vuuh-logo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -1rem auto 1.5rem;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.project-page .vuuh-logo-header img {
+  width: min(100%, 900px);
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.project-page .vuuh-section {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.project-page .vuuh-copy h2,
+.project-page .vuuh-compare-column h3 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.06em;
+}
+
+.project-page .vuuh-copy p {
+  margin: 0 0 1rem;
+  color: #2f2c3d;
+  line-height: 1.6;
+}
+
+.project-page .vuuh-visual-card,
+.project-page .vuuh-compare-card {
+  background: #f6f4fb;
+  border: 1px solid rgba(18, 5, 112, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(18, 5, 112, 0.06);
+}
+
+.project-page .vuuh-installation,
+.project-page .vuuh-modal-card,
+.project-page .vuuh-success-card {
+  padding: 1rem;
+}
+
+.project-page .vuuh-visual-card img,
+.project-page .vuuh-compare-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-page .vuuh-checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-page .vuuh-checklist-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  background: #f6f4fb;
+  border: 1px solid rgba(18, 5, 112, 0.08);
+}
+
+.project-page .vuuh-compare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.project-page .vuuh-compare-column {
+  display: grid;
+  gap: 1rem;
+}
+
+.project-page .vuuh-compare-card {
+  padding: 1rem;
+}
+
 @media (max-width: 720px) {
   .project-page .project-gallery-row,
-  .project-page .project-gallery-row--bottom {
+  .project-page .project-gallery-row--bottom,
+  .project-page .vuuh-section,
+  .project-page .vuuh-compare {
+    grid-template-columns: 1fr;
+  }
+
+  .project-page .vuuh-checklist-grid {
     grid-template-columns: 1fr;
   }
 }
