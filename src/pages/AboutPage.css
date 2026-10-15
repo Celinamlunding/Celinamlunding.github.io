@@ -67,16 +67,13 @@
 }
 
 .about-story {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
-  gap: 2rem;
   width: min(100% - 2rem, 1200px);
   margin: 0 auto;
   padding: 2rem 0 4rem;
-  align-items: start;
 }
 
 .about-copy {
+  width: min(100%, 760px);
   padding-top: 0.75rem;
 }
 
@@ -88,52 +85,85 @@
   letter-spacing: 0.01em;
 }
 
-.about-photo-grid {
+.about-carousel-section {
+  width: min(100%, 980px);
+  margin: 2.5rem auto 0;
+}
+
+.about-carousel {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.85rem 0.7rem;
-  align-items: start;
-  max-width: 640px;
-  margin-left: auto;
-  padding-top: 0.5rem;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
 }
 
-.about-photo {
-  width: 100%;
+.about-carousel__button {
+  width: 2.8rem;
+  height: 2.8rem;
+  border: 1px solid rgba(68, 7, 7, 0.3);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  color: #440707;
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.about-carousel__button:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.about-carousel__image {
   display: block;
-  object-fit: cover;
-  background: #cfd6e5;
-  box-shadow: 0 10px 24px rgba(21, 15, 35, 0.12);
+  width: 100%;
+  max-height: 32rem;
+  object-fit: contain;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.about-carousel__thumbs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.about-carousel__thumb {
+  width: 4.2rem;
+  height: 4.2rem;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 0;
   overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.about-photo-one {
-  height: 12rem;
+.about-carousel__thumb.is-active {
+  border-color: #120570;
 }
 
-.about-photo-two {
-  height: 16rem;
-  margin-top: 2rem;
+.about-carousel__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.about-photo-three {
-  height: 13rem;
-  margin-top: -0.5rem;
-}
-
-.about-photo-four {
-  height: 14rem;
-  margin-top: 1.5rem;
-}
-
-.about-photo-five {
-  height: 12rem;
-  margin-top: 0.5rem;
-}
-
-.about-photo-six {
-  height: 13.5rem;
-  margin-top: -1rem;
+@media (max-width: 900px) {
+  .about-carousel__image {
+    max-height: 24rem;
+  }
 }
 
 @media (max-width: 900px) {
@@ -150,13 +180,8 @@
     height: 22rem;
   }
 
-  .about-story {
-    grid-template-columns: 1fr;
-  }
-
-  .about-photo-grid {
-    max-width: none;
-    margin: 0;
+  .about-carousel__image {
+    height: 24rem;
   }
 }
 

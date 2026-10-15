@@ -131,25 +131,6 @@ p {
   background: transparent;
 }
 
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0;
-  margin: 1.25rem 0;
-  list-style: none;
-}
-
-.tag-list li {
-  border: 1px solid #ded6ca;
-  border-radius: 999px;
-  background: #ffffff;
-  color: #475569;
-  padding: 0.35rem 0.7rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
 @media (max-width: 720px) {
   .page {
     padding-top: 2rem;
