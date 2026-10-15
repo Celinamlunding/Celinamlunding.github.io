@@ -1,6 +1,30 @@
+import { useState } from "react";
 import "./AboutPage.css";
 
+const portraits = [
+  "/billeder/om-mig/IMG_0535.jpg",
+  "/billeder/om-mig/IMG_0543.jpg",
+  "/billeder/om-mig/IMG_0557.jpg",
+  "/billeder/om-mig/IMG_0878_Original.jpg",
+  "/billeder/om-mig/IMG_8631.jpg",
+  "/billeder/om-mig/IMG_1699.jpg",
+];
+
 function AboutPage() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const goToPrevious = () => {
+    setActiveIndex((current) =>
+      current === 0 ? portraits.length - 1 : current - 1,
+    );
+  };
+
+  const goToNext = () => {
+    setActiveIndex((current) =>
+      current === portraits.length - 1 ? 0 : current + 1,
+    );
+  };
+
   return (
     <div className="about-page">
       <div className="about-hero">
@@ -20,74 +44,67 @@ function AboutPage() {
       <section className="about-story" aria-label="Om Celina">
         <div className="about-copy">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Jeg brænder for alt hvor jeg kan få lov til at være kreativ og
+            tillære mig nye evner. Jeg har en stor interesse indenfor for
+            markedsføring, grafisk design og content creation. Selvom jeg elsker
+            at fordybe mig og sidde intensivt med opgaver, foretrækker jeg at
+            arbejde i teams, da jeg syntes de forskellige perspektiver, ideer og
+            sparring man får er mega fedt.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Jeg kommer originalt fra en lille by i Sønderjylland, men har prøvet
+            at bo lidt forskellige steder, heriblandt Aalborg og nu Aarhus. Til
+            dagligt studierer jeg, samt arbejder deltid ved siden af. Ellers
+            bruger jeg meget af min tid på at tilbringe tid med mine venner,
+            spille musik, tage til koncerter og være ude at rejse, når
+            muligheden er der. Her centrerer jeg meget af min tid på at tage
+            billeder og videoer, da jeg elsker at fange øjeblikke i momentet, så
+            jeg kan have dem som minder forevigt.
           </p>
         </div>
 
-        <div className="about-photo-grid" aria-label="Celina photo collage">
-          <img
-            className="about-photo about-photo-one"
-            src="/billeder/om-mig/IMG_0535.jpg"
-            alt="Celina portrait 1"
-          />
-          <img
-            className="about-photo about-photo-two"
-            src="/billeder/om-mig/IMG_0543.jpg"
-            alt="Celina portrait 2"
-          />
-          <img
-            className="about-photo about-photo-three"
-            src="/billeder/om-mig/IMG_0557.jpg"
-            alt="Celina portrait 3"
-          />
-          <img
-            className="about-photo about-photo-four"
-            src="/billeder/om-mig/IMG_0878_Original.jpg"
-            alt="Celina portrait 4"
-          />
-          <img
-            className="about-photo about-photo-five"
-            src="/billeder/om-mig/IMG_8631.jpg"
-            alt="Celina portrait 5"
-          />
-          <img
-            className="about-photo about-photo-six"
-            src="/billeder/om-mig/IMG_1699.jpg"
-            alt="Celina portrait 6"
-          />
+        <div className="about-carousel-section" aria-label="Billedekarusel">
+          <div className="about-carousel">
+            <button
+              type="button"
+              className="about-carousel__button"
+              onClick={goToPrevious}
+              aria-label="Se tidligere billede"
+            >
+              ‹
+            </button>
+
+            <img
+              src={portraits[activeIndex]}
+              alt={`Celina portræt ${activeIndex + 1}`}
+              className="about-carousel__image"
+            />
+
+            <button
+              type="button"
+              className="about-carousel__button"
+              onClick={goToNext}
+              aria-label="Se næste billede"
+            >
+              ›
+            </button>
+          </div>
+
+          <div className="about-carousel__thumbs" aria-label="Vælg billede">
+            {portraits.map((portrait, index) => (
+              <button
+                key={portrait}
+                type="button"
+                className={`about-carousel__thumb ${
+                  index === activeIndex ? "is-active" : ""
+                }`}
+                onClick={() => setActiveIndex(index)}
+                aria-label={`Vis billede ${index + 1}`}
+              >
+                <img src={portrait} alt={`Miniature ${index + 1}`} />
+              </button>
+            ))}
+          </div>
         </div>
       </section>
     </div>

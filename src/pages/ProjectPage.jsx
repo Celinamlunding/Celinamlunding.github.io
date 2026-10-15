@@ -85,21 +85,6 @@ function ProjectPage() {
             <h1 className="project-case-study__title">{project.title}</h1>
             <p className="project-case-study__lead">{project.description}</p>
 
-            <div className="project-case-study__meta">
-              <div>
-                <span>Rolle</span>
-                <strong>{project.tags[0] || "Design"}</strong>
-              </div>
-              <div>
-                <span>Samarbejde</span>
-                <strong>Individuelt projekt</strong>
-              </div>
-              <div>
-                <span>Fokus</span>
-                <strong>{project.tags[1] || "Brand"}</strong>
-              </div>
-            </div>
-
             {project.links?.length > 0 && (
               <div className="project-case-study__actions">
                 {project.links.map((link) => (
@@ -139,66 +124,184 @@ function ProjectPage() {
       </div>
 
       <div className="project-story">
+        <div className="project-story__process">
+          <h2>{story.processTitle}</h2>
+
+          {story.processLink && (
+            <a
+              className="project-story__process-link"
+              href={story.processLink.href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {story.processLink.label}
+            </a>
+          )}
+
+          <p>{story.processParagraph}</p>
+
+          {story.findings?.length > 0 && (
+            <ul className="project-story__findings">
+              {story.findings.map((item) => (
+                <li key={item.title}>
+                  <span className="project-story__finding-title">
+                    {item.title}.
+                  </span>{" "}
+                  {item.text}
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {story.processParagraph2 && (
+            <p className="project-story__process-supporting">
+              {story.processParagraph2}
+            </p>
+          )}
+        </div>
+
         <div className="project-story__split">
           <div className="project-story__column">
             <span className="project-case-study__number">01</span>
             <h2>Udfordringen</h2>
             <p>{story.challenge}</p>
             <p>{story.challenge2}</p>
+            {story.challenge3 && <p>{story.challenge3}</p>}
+
+            {project.slug === "Re Rouge" && (
+              <a
+                className="project-story__cta-button"
+                href="https://www.figma.com/proto/NPfFnMTZQaMlIFLg7Qmzqq/RE-ROUGE?node-id=405-488&viewport=482%2C163%2C0.18&t=dEH1qWbPMtk2dMG7-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=405%3A488&show-proto-sidebar=1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Se og prøv indleveringsflow
+              </a>
+            )}
           </div>
 
-          <div className="project-story__column">
-            <span className="project-case-study__number">02</span>
-            <h2>Løsningen</h2>
-            <p>{story.solution}</p>
-            <p>{story.solution2}</p>
-          </div>
-        </div>
-
-        <div className="project-story__process">
-          <p className="project-mini-label">PROCESSEN</p>
-          <h2>{story.processTitle}</h2>
-          <p>{story.processParagraph}</p>
-
-          <div className="project-story__cards">
-            {(story.cards || defaultStory.cards).map((card) => (
-              <article key={card.title} className="project-story__card">
-                <span>{card.number}</span>
-                <h3>{card.title}</h3>
-                <p>{card.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        <div className="project-story__optimization">
-          <div className="project-story__compare">
-            <div className="comparison-card comparison-card--before">
-              <div className="comparison-card__label">Før</div>
-              <div className="comparison-card__mockup">
-                <div className="comparison-card__screen">
-                  <span>{project.title}</span>
-                </div>
+          {project.slug === "Mellemrum" ? (
+            <div className="project-story__column project-story__column--visual">
+              <span className="project-case-study__number">02</span>
+              <h2>Løsningen</h2>
+              <div className="mellemrum-image-grid">
+                <img
+                  src={`${import.meta.env.BASE_URL}billeder/mellemrum/ugyldig.png`}
+                  alt="Mellemrum ugyldig tilmelding"
+                />
+                <img
+                  src={`${import.meta.env.BASE_URL}billeder/mellemrum/allerede-tilmeldt.png`}
+                  alt="Mellemrum allerede tilmeldt"
+                />
               </div>
             </div>
-
-            <div className="comparison-card comparison-card--after">
-              <div className="comparison-card__label">Efter</div>
-              <div className="comparison-card__mockup">
-                <div className="comparison-card__screen comparison-card__screen--alt">
-                  <span>{project.title}</span>
-                </div>
+          ) : project.slug === "Vuuh" ? (
+            <div className="project-story__column project-story__column--visual">
+              <span className="project-case-study__number">02</span>
+              <h2>Løsningen</h2>
+              <div className="vuuh-solution-gallery">
+                <img
+                  src={`${import.meta.env.BASE_URL}billeder/vuuh/checklist-1.svg`}
+                  alt="Vuuh checklist design 1"
+                />
+                <img
+                  src={`${import.meta.env.BASE_URL}billeder/vuuh/checklist-2.svg`}
+                  alt="Vuuh checklist design 2"
+                />
+                <img
+                  src={`${import.meta.env.BASE_URL}billeder/vuuh/checklist-3.svg`}
+                  alt="Vuuh checklist design 3"
+                />
               </div>
             </div>
-          </div>
-
-          <div className="project-story__text-block">
-            <p className="project-mini-label">OPTIMERINGEN</p>
-            <h2>{story.optimizationTitle}</h2>
-            <p>{story.optimizationParagraph1}</p>
-            <p>{story.optimizationParagraph2}</p>
-          </div>
+          ) : project.slug === "Re Rouge" ? (
+            <div className="project-story__column project-story__column--visual">
+              <span className="project-case-study__number">02</span>
+              <h2>Løsningen</h2>
+              <div className="vuuh-solution-gallery">
+                <img
+                  src={`${import.meta.env.BASE_URL}billeder/la%20rouge/s%C3%A6lge-t%C3%B8j.png`}
+                  alt="La Rouge sælge tøj billede"
+                />
+              </div>
+            </div>
+          ) : (
+            <div className="project-story__column">
+              <span className="project-case-study__number">02</span>
+              <h2>Løsningen</h2>
+              <p>{story.solution}</p>
+              <p>{story.solution2}</p>
+            </div>
+          )}
         </div>
+
+        {project.slug === "Vuuh" && (
+          <div className="project-story__before-after">
+            <p className="project-mini-label">FØR &amp; EFTER</p>
+            <h2>Før og efter</h2>
+            <div className="project-story__before-after-grid">
+              <img
+                src={`${import.meta.env.BASE_URL}billeder/vuuh/F%C3%B8r.png`}
+                alt="Vuuh før redesign"
+              />
+              <img
+                src={`${import.meta.env.BASE_URL}billeder/vuuh/efter.png`}
+                alt="Vuuh efter redesign"
+              />
+            </div>
+          </div>
+        )}
+
+        {project.slug === "Mellemrum" && (
+          <div className="project-story__image-text-block">
+            <div className="project-story__image-text-copy">
+              <p className="project-mini-label">STRUKTUR</p>
+              <h2>{story.structureTitle}</h2>
+              <p>{story.structureParagraph}</p>
+            </div>
+
+            <div className="project-story__image-wrap">
+              <img
+                src={`${import.meta.env.BASE_URL}billeder/mellemrum/mappe-struktur.png`}
+                alt="Mellemrum kodearkitektur"
+              />
+            </div>
+          </div>
+        )}
+
+        {project.slug === "Re Rouge" && (
+          <div className="project-story__process project-story__process--secondary">
+            <h2>Re-Rōuge - House of Brand</h2>
+
+            <a
+              className="project-story__branddeck-button"
+              href="https://www.figma.com/design/NPfFnMTZQaMlIFLg7Qmzqq/RE-ROUGE?node-id=1487-1323"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Se branddeck
+            </a>
+
+            <p>
+              Re-Rōuges er bygget op på ordene affordable chic, og viser en mere
+              tilgængelig vej ind i La Rōuges nuværende univers, uden at gå på
+              kompromis med den gode kvalitet og stil.
+            </p>
+            <p>
+              Konceptet for Re-Rōuge blev udviklet som en forlængelse af La
+              Rōuges eksisterende hjemmeside, med de samme værdier, som bygger
+              på kvalitet, selflove og det at være sig selv.
+            </p>
+            <p>
+              Re-Rōuge´s visuelle udtryk udforsker mere den selvsikkerhed, og
+              kant som La Rōuge også bygger på, men ikke helt viser. Dette kan
+              tydeligt mærkes i den vinrøde farve der ses igennem Re Rōuges
+              hjemmeside, samt i den læbestift inspireret font der bruges som
+              accent typografi gennem siden. Tone of Voice følger generelt La
+              Rōuge, da målgruppen for deres re-commerce forblev den samme.
+            </p>
+          </div>
+        )}
 
         <div className="project-story__reflection">
           <div className="project-story__reflection-copy">
@@ -209,7 +312,7 @@ function ProjectPage() {
           </div>
 
           <div className="project-story__checklist">
-            <h3>Det tager jeg med videre</h3>
+            <h3>Værdiskabelse</h3>
             <ul>
               {(story.checklist || defaultStory.checklist).map((item) => (
                 <li key={item}>{item}</li>

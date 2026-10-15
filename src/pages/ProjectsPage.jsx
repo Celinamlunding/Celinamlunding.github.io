@@ -16,11 +16,6 @@ function ProjectsPage() {
             <div className="project-card-content">
               <h2>{project.title}</h2>
               <p>{project.summary}</p>
-              <ul className="tag-list">
-                {project.tags.map((tag) => (
-                  <li key={tag}>{tag}</li>
-                ))}
-              </ul>
               <Link to={`/projects/${project.slug}`}>Se projekt</Link>
             </div>
           </article>
