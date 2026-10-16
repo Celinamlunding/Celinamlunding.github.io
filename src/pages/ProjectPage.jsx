@@ -269,9 +269,9 @@ function ProjectPage() {
           </div>
         )}
 
-        {project.slug === "Re Rouge" && (
+        {project.slug === "Re Rōuge" && (
           <div className="project-story__process project-story__process--secondary">
-            <h2>Re-Rōuge - House of Brand</h2>
+            <h2>Re Rōuge - House of Brand</h2>
 
             <a
               className="project-story__branddeck-button"
@@ -283,17 +283,17 @@ function ProjectPage() {
             </a>
 
             <p>
-              Re-Rōuges er bygget op på ordene affordable chic, og viser en mere
+              Re Rōuges er bygget op på ordene affordable chic, og viser en mere
               tilgængelig vej ind i La Rōuges nuværende univers, uden at gå på
               kompromis med den gode kvalitet og stil.
             </p>
             <p>
-              Konceptet for Re-Rōuge blev udviklet som en forlængelse af La
+              Konceptet for Re Rōuge blev udviklet som en forlængelse af La
               Rōuges eksisterende hjemmeside, med de samme værdier, som bygger
               på kvalitet, selflove og det at være sig selv.
             </p>
             <p>
-              Re-Rōuge´s visuelle udtryk udforsker mere den selvsikkerhed, og
+              Re Rōuges visuelle udtryk udforsker mere den selvsikkerhed, og
               kant som La Rōuge også bygger på, men ikke helt viser. Dette kan
               tydeligt mærkes i den vinrøde farve der ses igennem Re Rōuges
               hjemmeside, samt i den læbestift inspireret font der bruges som
