@@ -168,7 +168,7 @@ function ProjectPage() {
             <p>{story.challenge2}</p>
             {story.challenge3 && <p>{story.challenge3}</p>}
 
-            {project.slug === "Re Rouge" && (
+            {(project.slug === "Re Rōuge" || project.slug === "Re Rouge") && (
               <a
                 className="project-story__cta-button"
                 href="https://www.figma.com/proto/NPfFnMTZQaMlIFLg7Qmzqq/RE-ROUGE?node-id=405-488&viewport=482%2C163%2C0.18&t=dEH1qWbPMtk2dMG7-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=405%3A488&show-proto-sidebar=1"
@@ -214,7 +214,7 @@ function ProjectPage() {
                 />
               </div>
             </div>
-          ) : project.slug === "Re Rouge" ? (
+          ) : project.slug === "Re Rōuge" || project.slug === "Re Rouge" ? (
             <div className="project-story__column project-story__column--visual">
               <span className="project-case-study__number">02</span>
               <h2>Løsningen</h2>
@@ -270,54 +270,54 @@ function ProjectPage() {
         )}
 
         {project.slug === "Re Rōuge" && (
-          <div className="project-story__process project-story__process--secondary">
-            <h2>Re Rōuge - House of Brand</h2>
+          <>
+            <div className="project-story__process project-story__process--secondary">
+              <h2>Re Rōuge - House of Brand</h2>
 
-            <a
-              className="project-story__branddeck-button"
-              href="https://www.figma.com/design/NPfFnMTZQaMlIFLg7Qmzqq/RE-ROUGE?node-id=1487-1323"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Se branddeck
-            </a>
+              <a
+                className="project-story__branddeck-button"
+                href="https://www.figma.com/design/NPfFnMTZQaMlIFLg7Qmzqq/RE-ROUGE?node-id=1487-1323"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Se branddeck
+              </a>
 
-            <p>
-              Re Rōuges er bygget op på ordene affordable chic, og viser en mere
-              tilgængelig vej ind i La Rōuges nuværende univers, uden at gå på
-              kompromis med den gode kvalitet og stil.
-            </p>
-            <p>
-              Konceptet for Re Rōuge blev udviklet som en forlængelse af La
-              Rōuges eksisterende hjemmeside, med de samme værdier, som bygger
-              på kvalitet, selflove og det at være sig selv.
-            </p>
-            <p>
-              Re Rōuges visuelle udtryk udforsker mere den selvsikkerhed, og
-              kant som La Rōuge også bygger på, men ikke helt viser. Dette kan
-              tydeligt mærkes i den vinrøde farve der ses igennem Re Rōuges
-              hjemmeside, samt i den læbestift inspireret font der bruges som
-              accent typografi gennem siden. Tone of Voice følger generelt La
-              Rōuge, da målgruppen for deres re-commerce forblev den samme.
-            </p>
-          </div>
-        )}
+              <p>
+                Re Rōuges er bygget op på ordene affordable chic, og viser en
+                mere tilgængelig vej ind i La Rōuges nuværende univers, uden at
+                gå på kompromis med den gode kvalitet og stil.
+              </p>
+              <p>
+                Konceptet for Re Rōuge blev udviklet som en forlængelse af La
+                Rōuges eksisterende hjemmeside, med de samme værdier, som bygger
+                på kvalitet, selflove og det at være sig selv.
+              </p>
+              <p>
+                Re Rōuges visuelle udtryk udforsker mere den selvsikkerhed, og
+                kant som La Rōuge også bygger på, men ikke helt viser. Dette kan
+                tydeligt mærkes i den vinrøde farve der ses igennem Re Rōuges
+                hjemmeside, samt i den læbestift inspireret font der bruges som
+                accent typografi gennem siden. Tone of Voice følger generelt La
+                Rōuge, da målgruppen for deres re-commerce forblev den samme.
+              </p>
+            </div>
 
-        {project.slug === "Re Rouge" && (
-          <div className="project-story__process-gallery">
-            <img
-              src={`${import.meta.env.BASE_URL}billeder/la%20rouge/fonts.png`}
-              alt="La Rouge typografi inspiration"
-            />
-            <img
-              src={`${import.meta.env.BASE_URL}billeder/la%20rouge/moodboard.png`}
-              alt="La Rouge moodboard"
-            />
-            <img
-              src={`${import.meta.env.BASE_URL}billeder/la%20rouge/farver.png`}
-              alt="La Rouge farvepalet"
-            />
-          </div>
+            <div className="project-story__process-gallery">
+              <img
+                src={`${import.meta.env.BASE_URL}billeder/la%20rouge/fonts.png`}
+                alt="La Rouge typografi inspiration"
+              />
+              <img
+                src={`${import.meta.env.BASE_URL}billeder/la%20rouge/moodboard.png`}
+                alt="La Rouge moodboard"
+              />
+              <img
+                src={`${import.meta.env.BASE_URL}billeder/la%20rouge/farver.png`}
+                alt="La Rouge farvepalet"
+              />
+            </div>
+          </>
         )}
 
         <div className="project-story__reflection">
