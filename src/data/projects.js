@@ -343,18 +343,18 @@ const projects = [
     ],
   },
   {
-    slug: "Re Rouge",
-    title: "La Rouge - Case Study",
+    slug: "Re Rōuge",
+    title: "La Rōuge - Case Study",
     year: "2026",
     summary:
-      "Optimerings case med formål at konceptudvikle og optimere La Rouge´s secondhand univers,",
+      "Optimerings case med formål at konceptudvikle og optimere La Rōuge´s secondhand univers,",
     description:
-      "La rouge er et kvinde modebrand, der har fokus på at lave tøj der passer til dig og skabt med intentionen at være tidløs, så tøjet kan bruges sæson efter sæson. De har også selv taget initiativet til at lave et secondhand universe, hvor kunder kan sælge tøjet tilbage til La rouge, i stedet for andre secondhand sider. Udfordringen ligger her i hvordan de kan informere nuværende og nye kunder omkring denne mulighed.",
+      "La Rōuge er et kvinde modebrand, der har fokus på at lave tøj der passer til dig og skabt med intentionen at være tidløs, så tøjet kan bruges sæson efter sæson. De har også selv taget initiativet til at lave et secondhand universe, hvor kunder kan sælge tøjet tilbage til La Rōuge, i stedet for andre secondhand sider. Udfordringen ligger her i hvordan de kan informere nuværende og nye kunder omkring denne mulighed.",
     tags: ["Brand Design", "Illustration", "Social Media"],
     image: `${import.meta.env.BASE_URL}billeder/la%20rouge/Group%2023.svg`,
     story: {
       challenge:
-        "Den første ting, og også den største ting jeg fandt ud af, var at den største årsag til at kunder ikke sælger inde på La Rōuge´s egen secondhand side, er fordi de ikke ved at den eksisterer. Dernæst er der også et problem i måden man skal sælge tøjet tilbage på. La Rōuge kræver at kunden har et ordrenummer på varen, eller en kvittering, så man kan skrive informationer fra den ind på siden. Dette gør dog at der er en forventning til at kunden har gemt disse ting, også hvis tøjet er noget man har fået i gave, eller fra familiemedlemmer/ venner. For at gøre indleveringen af tidligere produkter nemmere, benytter Re-Rōuge AI billede genkendelse til at søge i butikkens varesortiment, og finder på denne måde produkter uden at kunden skal have en kvittering.",
+        "Den første ting, og også den største ting jeg fandt ud af, var at den største årsag til at kunder ikke sælger inde på La Rōuge´s egen secondhand side, er fordi de ikke ved at den eksisterer. Dernæst er der også et problem i måden man skal sælge tøjet tilbage på. La Rōuge kræver at kunden har et ordrenummer på varen, eller en kvittering, så man kan skrive informationer fra den ind på siden. Dette gør dog at der er en forventning til at kunden har gemt disse ting, også hvis tøjet er noget man har fået i gave, eller fra familiemedlemmer/ venner. For at gøre indleveringen af tidligere produkter nemmere, benytter Re Rōuge AI billede genkendelse til at søge i butikkens varesortiment, og finder på denne måde produkter uden at kunden skal have en kvittering.",
 
       solution:
         "Jeg udviklede et mere fokuseret og troværdigt design, der gjorde produkterne, konceptet og værdien tydeligere for både nye og eksisterende kunder.",
@@ -390,7 +390,7 @@ const projects = [
         "Det gjorde det lettere for kunderne at forstå både idéen og den positive effekt, og det styrkede brandets tilhørsforhold og relevans.",
       reflectionTitle: "Reflektion og næste skridt",
       reflectionParagraph1:
-        "Dette optimeringsprojekt hat lært mig meget omkring brandidentitet, og hvor væsentlig en rolle det egentlig spiller. Syntes det har været fedt at arbejde med en rigtig virksomhed, og have bestemte rammer man skulle følge, så det er helt klart noget jeg vil huske, og tage med videre. Det næste skridt ville være at brugerteste om Re-Rōuge løser problemet, samt at tænke på hvordan man kunne markedsføre subbrandet, så det bliver mere udbredt for både nuværende kunder og fremtidige kunder. Samtidig ville det også være optimalt at udbrede deres re-commerce initiativ, for at det ikke bliver gemt væk på hjemmesiden, men kommer ud og stå på egen ben. I projektet kiggede jeg lidt på hvordan man kunne markedsføre brandet på SoMe og i virkeligheden (se branddeck for in store og SoMe inspiration), så det oplagte ville være også at vider arbejde denne ide. ",
+        "Dette optimeringsprojekt hat lært mig meget omkring brandidentitet, og hvor væsentlig en rolle det egentlig spiller. Syntes det har været fedt at arbejde med en rigtig virksomhed, og have bestemte rammer man skulle følge, så det er helt klart noget jeg vil huske, og tage med videre. Det næste skridt ville være at brugerteste om Re Rōuge løser problemet, samt at tænke på hvordan man kunne markedsføre subbrandet, så det bliver mere udbredt for både nuværende kunder og fremtidige kunder. Samtidig ville det også være optimalt at udbrede deres re-commerce initiativ, for at det ikke bliver gemt væk på hjemmesiden, men kommer ud og stå på egen ben. I projektet kiggede jeg lidt på hvordan man kunne markedsføre brandet på SoMe og i virkeligheden (se branddeck for in store og SoMe inspiration), så det oplagte ville være også at vider arbejde denne ide. ",
 
       checklist: [
         "Optimeringen i dette projekt gavner begge parter, dog nok mest La Rōuge i sidste ende. Det gavner virksomheden da de kan være hovedsælgeren for deres secondhand pieces, i stedet for andre retailers. Samtidig kan de potentielt også nå ud til en bredere målgruppe, da de så kommer i flere kunders prisleje, hvilket kan tiltrække potentielle kunder. ",
@@ -398,7 +398,7 @@ const projects = [
     },
     links: [
       {
-        label: "Se Re-Rōuge",
+        label: "Se Re Rōuge",
         href: "https://www.figma.com/proto/NPfFnMTZQaMlIFLg7Qmzqq/RE-ROUGE?node-id=683-763&viewport=458%2C317%2C0.18&t=dEH1qWbPMtk2dMG7-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=683%3A763&show-proto-sidebar=1",
       },
     ],
