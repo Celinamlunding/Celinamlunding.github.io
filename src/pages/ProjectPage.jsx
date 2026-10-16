@@ -303,6 +303,23 @@ function ProjectPage() {
           </div>
         )}
 
+        {project.slug === "Re Rouge" && (
+          <div className="project-story__process-gallery">
+            <img
+              src={`${import.meta.env.BASE_URL}billeder/la%20rouge/fonts.png`}
+              alt="La Rouge typografi inspiration"
+            />
+            <img
+              src={`${import.meta.env.BASE_URL}billeder/la%20rouge/moodboard.png`}
+              alt="La Rouge moodboard"
+            />
+            <img
+              src={`${import.meta.env.BASE_URL}billeder/la%20rouge/farver.png`}
+              alt="La Rouge farvepalet"
+            />
+          </div>
+        )}
+
         <div className="project-story__reflection">
           <div className="project-story__reflection-copy">
             <p className="project-mini-label">REFLEKSION</p>

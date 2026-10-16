@@ -351,7 +351,7 @@ const projects = [
     description:
       "La rouge er et kvinde modebrand, der har fokus på at lave tøj der passer til dig og skabt med intentionen at være tidløs, så tøjet kan bruges sæson efter sæson. De har også selv taget initiativet til at lave et secondhand universe, hvor kunder kan sælge tøjet tilbage til La rouge, i stedet for andre secondhand sider. Udfordringen ligger her i hvordan de kan informere nuværende og nye kunder omkring denne mulighed.",
     tags: ["Brand Design", "Illustration", "Social Media"],
-    image: `${import.meta.env.BASE_URL}billeder/logo/rerouge-logo.svg`,
+    image: `${import.meta.env.BASE_URL}billeder/la%20rouge/Group%2023.svg`,
     story: {
       challenge:
         "Den første ting, og også den største ting jeg fandt ud af, var at den største årsag til at kunder ikke sælger inde på La Rōuge´s egen secondhand side, er fordi de ikke ved at den eksisterer. Dernæst er der også et problem i måden man skal sælge tøjet tilbage på. La Rōuge kræver at kunden har et ordrenummer på varen, eller en kvittering, så man kan skrive informationer fra den ind på siden. Dette gør dog at der er en forventning til at kunden har gemt disse ting, også hvis tøjet er noget man har fået i gave, eller fra familiemedlemmer/ venner. For at gøre indleveringen af tidligere produkter nemmere, benytter Re-Rōuge AI billede genkendelse til at søge i butikkens varesortiment, og finder på denne måde produkter uden at kunden skal have en kvittering.",
