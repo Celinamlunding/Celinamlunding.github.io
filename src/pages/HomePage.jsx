@@ -8,11 +8,9 @@ function HomePage() {
       <section className="hero-section">
         <div className="hero-intro">
           <div className="hero-copy">
-            <h1 className="hero-heading">Mojnnn</h1>
+            <h1 className="hero-heading">Hejsa</h1>
             <p className="hero-text">
-              Jeg hedder Celina og arbejder med design, content creation og alt
-              imellem. Dette er en kollektion af alle mine cases, hygger
-              projekter, og læring.
+              Jeg hedder Celina og velkommen til min portfolio.
             </p>
           </div>
           <img
